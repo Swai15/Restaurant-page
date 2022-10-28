@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "TOP's restaurant page project",
+  "main": "index.js",
+  "scripts": {
+    "test": "Test",
+    "build": "webpack",
+    "watch": "webpack --progress --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Swai15/Restaurant-page.git"
+  },
+  "author": "Swai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Swai15/Restaurant-page/issues"
+  },
+  "homepage": "https://github.com/Swai15/Restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
