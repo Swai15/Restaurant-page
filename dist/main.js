@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("const tabs = document.querySelectorAll(\".list\");\r\n// const contents = document.querySelectorAll(\".content-main\");\r\nconst contents = document.querySelectorAll(\"tabContent\")\r\n\r\n\r\ntabs.forEach((tab) => {\r\n  tab.addEventListener(\"click\",(tab) => {\r\n    tabs.forEach((tab) => {\r\n      tab.classList.remove(\"active\")\r\n    })\r\n    tab.target.classList.add(\"active\")\r\n  })\r\n})\r\n\r\n\n\n//# sourceURL=webpack://project/./src/index.js?");
+eval("const tabs = document.querySelectorAll(\"[data-tab-target]\");\r\nconst tabContents = document.querySelectorAll(\"[data-tab-content]\")\r\n\r\ntabs.forEach((tab) => {\r\n  tab.addEventListener(\"click\",() => {\r\n    const target = document.querySelector(tab.dataset.tabTarget)\r\n    tabContents.forEach((tabContent) => {\r\n      tabContent.classList.remove(\"active\")\r\n    })\r\n    tabs.forEach((tab) => {\r\n      tab.classList.remove(\"active\");\r\n    })\r\n    tab.classList.add(\"active\")\r\n    target.classList.add(\"active\")\r\n  })\r\n})\r\n\r\n\n\n//# sourceURL=webpack://project/./src/index.js?");
 
 /***/ })
 

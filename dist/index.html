@@ -28,17 +28,17 @@
     </div>
 
     <!-- Start of MAIN section -->
-    <ul class="lists">
-      <li id="tabHome" class="list active">Home</li>
-      <li id="tabMenu" class="list">Menu</li>
-      <li id="tabContact" class="list">Contact us</li>
+    <ul class="tabs">
+      <li data-tab-target="#home" class="tab active">Home</li>
+      <li data-tab-target="#menu" class="tab">Menu</li>
+      <li data-tab-target="#contact" class="tab">Contact us</li>
     </ul>
 
     <div class="content-main">
 
-      <div>Our Products Trully are the finest in sna=</div>
+      <!-- <div>Our Products Trully are the finest in Ice cream industry</div> -->
       <!-- Home -->
-      <div id="contentHome" class="tabContent">
+      <div id="home" data-tab-content class="active">
         <h3>
           Our Products trully are the finest in the market
         </h3>
@@ -51,34 +51,49 @@
       </div>
 
       <!-- Menu -->
-      <div id="contentMenu" class="tabContent ">
+      <div id="menu" class="menu-container" data-tab-content>
         <div class="menu one">
-
+          <img src="/src/images/civilization.jpg" alt="civilization">
+          <p>test Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolore, ipsam porro adipisci ullam
+            reprehenderit eligendi possimus, autem sunt modi maiores, amet quis!</p>
         </div>
         <div class="menu two">
-
+          <img src="/src/images/female titan.jpg" alt="Female Titan">
+          <div class="menu-para">
+            <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, qui.</p>
+            <p> *Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, qui.</p>
+          </div>
         </div>
         <div class="menu three">
-
+          <img src="/src/images/rumbling.jpg" alt="The rumbling">
+          <div class="menu-para">
+            <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, qui.</p>
+            <p> *Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, qui.</p>
+          </div>
         </div>
         <div class="menu four">
-          <p>test</p>
+          <img src="/src/images/Ymir paths.jpg" alt="Ymir in Paths">
+          <div class="menu-para">
+            <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, qui.</p>
+            <p> *Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, qui.</p>
+          </div>
         </div>
       </div>
 
       <!-- Contact us -->
-      <div id="contentContact" class="tabContent">
+      <div id="contact" data-tab-content>
         <p><span class="contact">Phone Number:</span> 0787654321 </p>
         <p><span class="contact">Email: </span>Icecreampalour@gmail.com</p>
-        <form action="">
+        <!-- <form action="">
           <textarea name="Feedback" id="textarea" cols="30" rows="10"></textarea>
-        </form>
+        </form> -->
       </div>
       <!-- end of MAIN section -->
-
     </div>
+
+
   </div>
-  </div>
+
 
 
   <script src="main.js"></script>

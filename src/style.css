@@ -1,11 +1,16 @@
+:root {
+  --body-color: rgb(255, 224, 198);
+}
+
 * {
   margin: 0;
+  background-color: var(--body-color);
 }
 
 .header {
   height: 15vh;
   width: auto;
-  background-color: rgb(255, 224, 198);
+  background-color: var(--body-color);
   display: grid;
   justify-content: center;
   align-items: center;
@@ -32,8 +37,6 @@
   /* filter: blur(1px); */
 }
 
-
-
 .content-top h1 {
   position: absolute;
   left: 30px;
@@ -54,54 +57,94 @@
   width: 70%;
 }
 
-/* .content-top-description {
-  font-size: large;
-} */
-
-ul {
+.tabs {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(185, 153, 110);
+  list-style-type: none;
 
 }
 
-ul li {
-  list-style-type: none;
+.tab {
   /* background-color: rgb(94, 94, 94); */
   margin: 10px;
   padding: 10px 30px;
   padding-bottom: 3px;
   cursor: pointer;
-  border-bottom: 3px yellow solid;
+  border-bottom: 3px rgb(145, 101, 101) solid;
 }
 
-.tabContent {
+.tab:hover {
+  background-color: rgb(194, 148, 89);
+  color: white;
+}
+
+
+/* MAIN BODY */
+[data-tab-content] {
   display: none;
 }
 
-#contentMenu {
-  /* chek grids for styling */
-  /* display: grid; */
-  grid-auto-flow: column;
-  grid-template-columns: 2;
-
+.active[data-tab-content] {
+  display: grid;
+  justify-content: center;
 }
 
-#contentMenu .menu {
-  background-color: rgb(63, 63, 63);
-  width: 200px;
+.tab.active {
+  background-color: rgb(253, 195, 119);
+}
+
+.menu-container {
+  background-color: rgb(224, 190, 151);
+  width: 70vw;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.menu {
+  background-color: var(--body-color);
+  width: 68vw;
   height: 200px;
   border: 1px white solid;
+  margin: 20px 13px 20px 10px;
+  display: flex;
+  box-shadow: 0px 0.5px 5px black;
 }
 
-.active.tabContent {
-  display: block;
+.menu p {
+  padding-left: 5px;
 }
 
-.list.active {
-  background-color: rgb(85, 85, 85);
+#home p {
+  margin: 10px 30px;
+
 }
 
-.list.red {
-  border: 2px red solid;
+#home h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.menu-container img {
+  width: 300px;
+  height: 200px;
+  opacity: 0.85;
+  transition: 0.2s all linear;
+}
+
+.menu-container img:hover {
+  transform: translatex(-0.8px);
+  opacity: 1;
+}
+
+.content-main {
+  display: grid;
+  justify-content: center;
+}
+
+#contact {
+  width: 50vw;
+  height: 7vh;
+  margin: 30px;
 }
